@@ -3,14 +3,6 @@ from django.http import HttpResponse, HttpResponseNotFound
 
 # Create your views here.
 
-author = {
-    "Имя": "Иван",
-    "Отчество": "Петрович",
-    "Фамилия": "Иванов",
-    "телефон": "8-923-600-01-02",
-    "email": "vasya@mail.ru"
-}
-
 items = [
 {"id": 1, "name": "Кроссовки abibas" ,"quantity":5},
 {"id": 2, "name": "Куртка кожаная" ,"quantity":2},
@@ -32,14 +24,15 @@ def home(request):
     return render(request, "index.html", context)
 
 def about(request):
-    text =f"""
-    Имя: <b>{author['Имя']}</b><br>
-    Отчество: <b>{author['Отчество']}</b><br>
-    Фамилия: <b>{author['Фамилия']}</b><br>
-    телефон: <b>{author['телефон']}</b><br>
-    email: <b>{author['email']}</b><br>
-    """
-    return HttpResponse(text)
+    author = {
+    "name": "Иван",
+    "middle_name": "Петрович",
+    "las_name": "Иванов",
+    "phone": "8-923-600-01-02",
+    "email": "vasya@mail.ru"
+    }
+    return render(request, "about.html", {"author": author})
+    
 
 def get_item(request, item_id):
     """ По указанному id возвращаем имя элемента"""
