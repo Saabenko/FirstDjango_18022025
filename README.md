@@ -17,7 +17,7 @@ ext install batisteo.vscode-django
 
 Добавить в `setings.json`
 ```
-"emmet.includeLanguage": {
+"emmet.includeLanguages": {
     "django-html": "html",
 },
 "files.associations": {
