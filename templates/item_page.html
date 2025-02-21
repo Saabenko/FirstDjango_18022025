@@ -12,8 +12,13 @@
 
 
     <h2> Имя: {{ item.name }} </h2>
-    Количество:{{item.count | default:"Товар отсутствует" }}
-
+    <div>
+        Количество:{{item.count | default:"Товар отсутствует" }}
+    </div>
+    <div>
+        Описание: {{ item.description }}
+    </div>
+    <br><br>
     <p> <a href="/items"> Назад к списку товаров </a></p>
 </body>
 </html>
