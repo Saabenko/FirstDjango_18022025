@@ -12,18 +12,18 @@ def home(request):
     #"""
     #return HttpResponse(text)
     context = {
-        "name": "Петров Иван Николаевич",
-        "email": "my_mail@mail.ru",
+        "name": "Цабенко Максим Валерьевич",
+        "email": "max800@mail.ru",
     }
     return render(request, "index.html", context)
 
 def about(request):
     author = {
-    "name": "Иван",
-    "middle_name": "Петрович",
-    "las_name": "Иванов",
-    "phone": "8-923-600-01-02",
-    "email": "vasya@mail.ru"
+    "name": "Максим",
+    "middle_name": "Валерьевич",
+    "last_name": "Цабенко",
+    "phone": "8-919-723-15-74",
+    "email": "max800@mail.ru"
     }
     return render(request, "about.html", {"author": author})
     

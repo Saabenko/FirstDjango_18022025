@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start Page</title>
-</head>
-<body>
-    <header>
-        <a href="/"> Home</a> / <a href="/items"> Items </a> / <a href="/about"> About</a>
-    </header>
-    
-    <h1>Приветствую!</h1>
+{% extends "base.html" %}
 
-    Меня зовут: <i> {{ name }} </i><br>
-    Мой E-Mail: <i> {{ email }} </i><br><br>
+{% load static %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block content %}
+
+    {{ block.super }}
+    <br>
+    <img width="50px", src="{% static "images/django.svg" %}" alt="my image">
+
+    <h1> Приветствую! </h1>
+
+    <span style='color: blue;'>Меня зовут: <i> {{ name }}. </i></span><br>
+    Мой EMail: <i> {{ email }} </i><br><br>
+
     Это главная страница сайта<br>
-    !!!Сейчас сайт в разработке!!!</i>
+    <i>!!!Сейчас сайт в разработке!!!</i>
 
-</body>
-</html>
+{% endblock %}
