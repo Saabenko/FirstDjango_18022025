@@ -1,0 +1,76 @@
+[
+{
+    "model": "MainApp.color",
+    "pk": 1,
+    "fields": {
+        "name": "red"
+    }
+},
+{
+    "model": "MainApp.color",
+    "pk": 2,
+    "fields": {
+        "name": "green"
+    }
+},
+{
+    "model": "MainApp.color",
+    "pk": 3,
+    "fields": {
+        "name": "blue"
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 1,
+    "fields": {
+        "name": "Кроссовки",
+        "brand": "abibas",
+        "count": 10,
+        "description": "Описание элемента",
+        "colors": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 2,
+    "fields": {
+        "name": "Coca-cola bottle",
+        "brand": "Coca-cola",
+        "count": 5,
+        "description": "Описание элемента",
+        "colors": [
+            1,
+            3
+        ]
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 3,
+    "fields": {
+        "name": "Кепка",
+        "brand": "Текстиль",
+        "count": 10,
+        "description": "Описание элемента",
+        "colors": [
+            3
+        ]
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 4,
+    "fields": {
+        "name": "Картофель фри",
+        "brand": "где вкусно",
+        "count": 0,
+        "description": "Описание элемента",
+        "colors": []
+    }
+}
+]
